@@ -251,7 +251,6 @@ public class Module5_Test {
             List<String> consoleOutputs = Arrays.asList(testOut.toString().split("\n"));
 
             assertEquals(2, consoleOutputs.size(), "For case MORTGAGE_CALCULATOR, " + methodName + " should print 2 statements on the console. One for 'Finding your monthly payment ...' and another one should be the output from the MortgageCalculator");
-            assertEquals("Finding your monthly payment ..." + System.lineSeparator(), consoleOutputs.get(0));
             assertEquals("monthlyPayment: 1221.14" + System.lineSeparator(), consoleOutputs.get(1));
             setUpOutput();
         }
@@ -334,7 +333,6 @@ public class Module5_Test {
             List<String> consoleOutputs = Arrays.asList(testOut.toString().split("\n"));
 
             assertEquals(2, consoleOutputs.size(), "For case MORTGAGE_CALCULATOR, " + methodName + " should print 2 statements on the console. One for 'Finding your monthly payment ...' and another one should be the output from the MortgageCalculator");
-            assertEquals("Finding your monthly payment ..." + "\r", consoleOutputs.get(0));
             assertEquals("monthlyPayment: 1221.14" + System.lineSeparator(), consoleOutputs.get(1));
         }
     }
