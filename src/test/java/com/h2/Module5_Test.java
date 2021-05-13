@@ -238,7 +238,7 @@ public class Module5_Test {
             List<String> consoleOutputs = Arrays.asList(testOut.toString().split("\n"));
 
             assertEquals(2, consoleOutputs.size(), "For case SAVINGS_CALCULATOR, " + methodName + " should print 2 statements on the console. One for 'Finding your net savings ...' and another one should be the output from the SavingsCalculator");
-            assertEquals("Finding your net savings ..." + "\r", consoleOutputs.get(0));
+            assertEquals("Finding your net savings ..." + System.lineSeparator(), consoleOutputs.get(0));
             assertTrue(consoleOutputs.get(1).startsWith("Net Savings = 5.0, remaining days in month = "), "For case SAVINGS_CALCULATOR, " + methodName + " should have printed an output similar to 'Net Savings = 51.0, remaining days in month = '");
             setUpOutput();
         }
@@ -251,8 +251,8 @@ public class Module5_Test {
             List<String> consoleOutputs = Arrays.asList(testOut.toString().split("\n"));
 
             assertEquals(2, consoleOutputs.size(), "For case MORTGAGE_CALCULATOR, " + methodName + " should print 2 statements on the console. One for 'Finding your monthly payment ...' and another one should be the output from the MortgageCalculator");
-            assertEquals("Finding your monthly payment ..." + "\r", consoleOutputs.get(0));
-            assertEquals("monthlyPayment: 1221.14" + "\r", consoleOutputs.get(1));
+            assertEquals("Finding your monthly payment ..." + System.lineSeparator(), consoleOutputs.get(0));
+            assertEquals("monthlyPayment: 1221.14" + System.lineSeparator(), consoleOutputs.get(1));
             setUpOutput();
         }
         {
@@ -266,12 +266,12 @@ public class Module5_Test {
 
             assertEquals(5, consoleOutputs.size(), "For case BEST_LOAN_RATES, There must be 4 statements on console - 1 for asking name, 1 for printing name back, 1 for asking loan term, 1 for printing no available rates for term (strictly in this order!)");
 
-            assertEquals("Finding best loan rates ..." + "\r", consoleOutputs.get(0));
-            assertEquals("Enter your name" + "\r", consoleOutputs.get(1));
-            assertEquals("Hello " + name + "\r", consoleOutputs.get(2));
+            assertEquals("Finding best loan rates ..." + System.lineSeparator(), consoleOutputs.get(0));
+            assertEquals("Enter your name" +  System.lineSeparator(), consoleOutputs.get(1));
+            assertEquals("Hello " + name +  System.lineSeparator(), consoleOutputs.get(2));
 
-            assertEquals("Enter the loan term (in years)" + "\r", consoleOutputs.get(3));
-            assertEquals("No available rates for term: " + loanTermInYears + " years" + "\r" , consoleOutputs.get(4));
+            assertEquals("Enter the loan term (in years)" +  System.lineSeparator(), consoleOutputs.get(3));
+            assertEquals("No available rates for term: " + loanTermInYears + " years" +  System.lineSeparator() , consoleOutputs.get(4));
         }
     }
 
@@ -334,8 +334,8 @@ public class Module5_Test {
             List<String> consoleOutputs = Arrays.asList(testOut.toString().split("\n"));
 
             assertEquals(2, consoleOutputs.size(), "For case MORTGAGE_CALCULATOR, " + methodName + " should print 2 statements on the console. One for 'Finding your monthly payment ...' and another one should be the output from the MortgageCalculator");
-            assertEquals("Finding your monthly payment ..." + "\r", consoleOutputs.get(0));
-            assertEquals("monthlyPayment: 1221.14" + "\r", consoleOutputs.get(1));
+            assertEquals("Finding your monthly payment ..." + System.lineSeparator(), consoleOutputs.get(0));
+            assertEquals("monthlyPayment: 1221.14" + System.lineSeparator(), consoleOutputs.get(1));
         }
     }
 }
